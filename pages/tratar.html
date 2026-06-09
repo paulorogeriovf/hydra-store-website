@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tratar Minha Piscina — Hydra Piscinas</title>
+  <meta name="description" content="Assistente inteligente de tratamento de piscinas. Diagnóstico e passo a passo completo com dosagens calculadas." />
+  <link rel="icon" href="../img/logofundobranco.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/tratar.css" />
+</head>
+<body>
+
+  <canvas id="water-particles"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="logo">
+      <img src="../img/logo2025.png" alt="Hydra Piscinas" />
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+      <li><a href="tratar.html" class="active nav-cta">💧 Tratar Minha Piscina</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <!-- HERO -->
+    <div class="treat-hero">
+      <div class="treat-hero-tag">Assistente Inteligente</div>
+      <h1>Tratar Minha <span>Piscina</span></h1>
+      <p>Responda algumas perguntas e receba o diagnóstico + passo a passo completo do tratamento, com dosagens calculadas para o volume da sua piscina.</p>
+
+      <!-- Barra de progresso -->
+      <div class="progress-bar-wrap">
+        <div class="progress-line" id="progress-line" style="width:0%"></div>
+        <div class="progress-steps">
+          <div class="step-dot active" id="dot-1">1<span class="label">Tamanho</span></div>
+          <div class="step-dot" id="dot-2">2<span class="label">Problema</span></div>
+          <div class="step-dot" id="dot-3">3<span class="label">Parâmetros</span></div>
+          <div class="step-dot" id="dot-4">✓<span class="label">Diagnóstico</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASSISTENTE -->
+    <div class="treat-main">
+
+      <!-- ====================================================
+           ETAPA 1 — TAMANHO / LITRAGEM
+           ==================================================== -->
+      <div id="step-1" class="step-card visible">
+        <div class="step-header">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Tamanho da Piscina</div>
+            <div class="step-subtitle">Informe as dimensões ou a litragem diretamente</div>
+          </div>
+        </div>
+
+        <!-- Dimensões -->
+        <div class="input-row">
+          <div class="input-group">
+            <label for="s1-larg">Largura (m)</label>
+            <input type="number" id="s1-larg" placeholder="Ex: 5" min="0" step="0.1" oninput="calcLitragemAuto()" />
+          </div>
+          <div class="input-group">
+            <label for="s1-comp">Comprimento (m)</label>
+            <input type="number" id="s1-comp" placeholder="Ex: 8" min="0" step="0.1" oninput="calcLitragemAuto()" />
+          </div>
+          <div class="input-group">
+            <label for="s1-prof">Profundidade (m)</label>
+            <input type="number" id="s1-prof" placeholder="Ex: 1.5" min="0" step="0.1" oninput="calcLitragemAuto()" />
+          </div>
+        </div>
+
+        <!-- Resultado automático -->
+        <div class="result-litragem" id="result-auto">
+          <div class="pool-visual-wrap">
+            <div class="pool-mini" id="pool-mini-1">
+              <div class="wave-inner"></div>
+              <div class="wave-inner2"></div>
+            </div>
+          </div>
+          <span class="num" id="result-auto-val">—</span>
+          <span class="lbl">litros — piscina calculada automaticamente ✓</span>
+        </div>
+
+        <div class="divider-or">ou informe a litragem diretamente</div>
+
+        <div class="litragem-direct">
+          <label for="s1-litros">Litragem da piscina (litros)</label>
+          <input type="number" id="s1-litros" placeholder="Ex: 60000" min="0" step="100" oninput="onLitragemDirect()" />
+        </div>
+
+        <div style="margin-top:1.5rem">
+          <button class="btn-primary" onclick="goStep2()">Continuar → Identificar o problema</button>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           ETAPA 2 — PROBLEMA
+           ==================================================== -->
+      <div id="step-2" class="step-card">
+        <div class="step-header">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Qual o problema da piscina?</div>
+            <div class="step-subtitle">Selecione a opção que melhor descreve a situação atual da água</div>
+          </div>
+        </div>
+
+        <div class="pool-visual-wrap">
+          <div class="pool-mini" id="pool-mini-2">
+            <div class="wave-inner"></div>
+            <div class="wave-inner2"></div>
+          </div>
+        </div>
+
+        <div class="problems-grid" id="problems-grid">
+          <div class="problem-option" onclick="selectProblem(this,'verde','Água Verde','#2d7d3a','linear-gradient(160deg,#1a4d20,#2d7d3a)')">
+            <span class="problem-icon">🟢</span>
+            <span class="problem-label">Água Verde</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'turva','Água Turva / Opaca','#7a9baa','linear-gradient(160deg,#5a7a8a,#7a9baa)')">
+            <span class="problem-icon">🌫️</span>
+            <span class="problem-label">Turva / Opaca</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'branca','Água Branca Leitosa','#b0cce0','linear-gradient(160deg,#8aaac0,#b0cce0)')">
+            <span class="problem-icon">🤍</span>
+            <span class="problem-label">Branca / Leitosa</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'marrom','Água Marrom / Escura','#6b4226','linear-gradient(160deg,#4a2a14,#6b4226)')">
+            <span class="problem-icon">🟤</span>
+            <span class="problem-label">Marrom / Escura</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'espuma','Espuma na Superfície','#a0c8e0','linear-gradient(160deg,#4a90c8,#a0c8e0)')">
+            <span class="problem-icon">🫧</span>
+            <span class="problem-label">Espuma</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'metais','Manchas / Metais','#8b7355','linear-gradient(160deg,#5a4a35,#8b7355)')">
+            <span class="problem-icon">🔴</span>
+            <span class="problem-label">Manchas / Metais</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'cloro','Excesso de Cloro','#e0f0ff','linear-gradient(160deg,#a0d0ff,#e0f0ff)')">
+            <span class="problem-icon">⚗️</span>
+            <span class="problem-label">Excesso de Cloro</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'brilho','Sem Brilho / Fosca','#4a6a80','linear-gradient(160deg,#2a4a60,#4a6a80)')">
+            <span class="problem-icon">💧</span>
+            <span class="problem-label">Sem Brilho</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'algas','Algas Pretas','#2a3d2a','linear-gradient(160deg,#1a2d1a,#2a4d2a)')">
+            <span class="problem-icon">🌿</span>
+            <span class="problem-label">Algas Pretas</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'sujeira','Sujeira no Fundo','#5a7a5a','linear-gradient(160deg,#3a5a3a,#5a7a5a)')">
+            <span class="problem-icon">🍂</span>
+            <span class="problem-label">Sujeira no Fundo</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'manutencao','Manutenção Regular','#0a4a8a','linear-gradient(160deg,#0a3a6a,#0a5a9a)')">
+            <span class="problem-icon">✨</span>
+            <span class="problem-label">Manutenção Regular</span>
+          </div>
+          <div class="problem-option" onclick="selectProblem(this,'enchimento','Piscina Recém Enchida','#0066cc','linear-gradient(160deg,#0044aa,#0088dd)')">
+            <span class="problem-icon">🆕</span>
+            <span class="problem-label">Recém Enchida</span>
+          </div>
+        </div>
+
+        <div style="margin-top:1.75rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <button class="btn-secondary" onclick="backStep(1)">← Voltar</button>
+          <button class="btn-primary" id="btn-step2" onclick="goStep3()" disabled>Continuar → Parâmetros da água</button>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           ETAPA 3 — PARÂMETROS
+           ==================================================== -->
+      <div id="step-3" class="step-card">
+        <div class="step-header">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Parâmetros da Água</div>
+            <div class="step-subtitle">Informe os valores do seu teste de água (opcional)</div>
+          </div>
+        </div>
+
+        <div class="params-grid">
+          <div class="param-card">
+            <div class="param-label">pH</div>
+            <div class="param-range">Ideal: 7,2 – 7,6</div>
+            <input type="number" id="p-ph" placeholder="Ex: 7.4" step="0.1" min="0" max="14" />
+          </div>
+          <div class="param-card">
+            <div class="param-label">Cloro Livre (ppm)</div>
+            <div class="param-range">Ideal: 1,0 – 3,0 ppm</div>
+            <input type="number" id="p-cloro" placeholder="Ex: 2.0" step="0.1" min="0" max="20" />
+          </div>
+          <div class="param-card">
+            <div class="param-label">Alcalinidade</div>
+<div class="param-range">Informe em ppm (10, 20, 30...) Ideal: 100 – 120 ppm</div>
+            <input type="number" id="p-alc" placeholder="Ex: 100 ou 10" step="1" min="0" max="500" />
+          </div>
+        </div>
+
+        <!-- Tutorial de teste -->
+        <details>
+          <div class="test-tutorial">
+            <summary>❓ Como faço o teste da água?</summary>
+            <div class="test-steps">
+              <div class="test-step">
+                <div class="test-step-num">1</div>
+                <span>Adquira um kit de teste (tubos comparadores) disponível aqui na loja.</span>
+              </div>
+              <div class="test-step">
+                <div class="test-step-num">2</div>
+                <span>Colete água da piscina a cerca de 30cm de profundidade, longe das saídas de retorno.</span>
+              </div>
+              <div class="test-step">
+                <div class="test-step-num">3</div>
+                <span>Encha os tubos do kit com a água coletada até a marcação indicada.</span>
+              </div>
+              <div class="test-step">
+                <div class="test-step-num">4</div>
+                <span>Adicione os reagentes correspondentes (DPD para cloro, Fenol Red para pH).</span>
+              </div>
+              <div class="test-step">
+                <div class="test-step-num">5</div>
+                <span>Compare a cor resultante com a escala colorimétrica do kit e anote os valores.</span>
+              </div>
+            </div>
+            <div class="store-tip">
+              🏪 Prefere não fazer o teste? <a href="https://wa.me/5519999040358?text=Olá, gostaria de fazer o teste de água na loja." target="_blank">A Hydra Piscinas realiza análise gratuita na loja.</a>
+            </div>
+          </div>
+        </details>
+
+        <p class="skip-note" style="margin-top:1rem">Se não souber os parâmetros, deixe em branco — faremos recomendações gerais baseadas no problema.</p>
+
+        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <button class="btn-secondary" onclick="backStep(2)">← Voltar</button>
+          <button class="btn-primary" onclick="gerarDiagnostico()">🔬 Gerar Diagnóstico</button>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           DIAGNÓSTICO
+           ==================================================== -->
+      <div id="diagnostico-card">
+        <div class="diag-header">
+          <span class="diag-icon" id="diag-icon">🔬</span>
+          <h2 id="diag-titulo">Diagnóstico da sua piscina</h2>
+          <p id="diag-subtitulo">Análise baseada nos dados fornecidos</p>
+        </div>
+        <div class="diag-body">
+          <div id="steps-list" class="steps-list"></div>
+
+          <div class="diag-footer">
+            <h3>🏪 Encontre todos os produtos na Hydra Piscinas</h3>
+            <p>Atendemos presencialmente em Arthur Nogueira. Nossa equipe pode auxiliar com a dosagem correta e tirar todas as suas dúvidas.</p>
+            <div class="diag-footer-btns">
+              <a href="https://wa.me/5519999040358?text=Olá, acabei de usar o assistente de tratamento. Gostaria de ajuda com os produtos." target="_blank" class="btn-primary">📱 Falar no WhatsApp</a>
+              <a href="../index.html#contato" class="btn-secondary">📍 Ver localização</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="restart-btn">
+          <button onclick="restart()">↺ Fazer novo diagnóstico</button>
+        </div>
+      </div>
+
+    </div><!-- /treat-main -->
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>© 2026 Hydra Piscinas • Todos os direitos reservados</p>
+        <p class="author">Desenvolvido por Paulo Rogério Vigário</p>
+      </div>
+      <div class="footer-center">
+        <p>Associados da ANNAP</p>
+        <img src="../img/anapp.webp" alt="ANNAP" />
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/tratar.js"></script>
+
+</body>
+</html>

@@ -3,149 +3,250 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hydra Piscinas - Produtos</title>
-
-  <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/produtos.css">
-  <link rel="icon" href="../img/logofundobranco.jpg" type="image/png" />
+  <title>Produtos — Hydra Piscinas</title>
+  <meta name="description" content="Catálogo completo de produtos químicos e acessórios para piscinas. Calculadora de litragem gratuita." />
+  <link rel="icon" href="../img/logofundobranco.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/produtos.css" />
 </head>
-
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="../img/logo2025.png" alt="Logo Hydra Piscinas" />
-        <span></span>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../pages/servicos.html">Serviços</a></li>
-        <li><a href="../pages/produtos.html" class="active">Produtos</a></li>
-        <li><a href="https://wa.me/5519999040358?text=Ol%C3%A1%2C+quero+mais+informa%C3%A7%C3%B5es.">Contato</a></li>
-      </ul>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-    </nav>
 
-    <!-- Onda SVG -->
-    <div class="wave-container">
-      <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path fill="#0a70ac" d="M0,0 C360,150 1080,0 1440,150 L1440,0 L0,0 Z"></path>
+  <canvas id="water-particles"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="logo">
+      <img src="../img/logo2025.png" alt="Hydra Piscinas" />
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="produtos.html" class="active">Produtos</a></li>
+      <li><a href="tratar.html" class="nav-cta">💧 Tratar Minha Piscina</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <!-- HERO -->
+    <div class="page-hero">
+      <div class="page-hero-tag">Catálogo</div>
+      <h1>Nossos <span>Produtos</span></h1>
+      <p>Trabalhamos com as melhores marcas do mercado, garantindo qualidade e segurança para a água da sua piscina.</p>
+    </div>
+
+    <div class="page-wave">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path fill="#051828" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"/>
       </svg>
     </div>
-  </header>
 
-  <main>
-    <section class="section-produtos">
-      <h2>Catálogo de Produtos</h2>
-      <h4>Trabalhamos com uma ampla variedade de marcas reconhecidas no mercado garantindo qualidade e segurança para sua piscina</h4>
+    <!-- CATÁLOGO -->
+    <section class="products-section">
+      <div class="section-header reveal" style="max-width:1200px;margin:0 auto 2.5rem;">
+        <div class="section-tag">Linha completa Disponivel na Loja </div>
+        <h2 class="section-title">Catálogo de <span>Produtos</span></h2>
+      </div>
 
-      <div class="cards">
-        <div class="card">
-          <img src="../img/prod1.webp" alt="Cloros">
-          <h3>Cloros</h3>
-          <p>Produto essencial para a desinfecção eficaz da piscina, eliminando bactérias e mantendo a água limpa.</p>
+      <div class="products-grid">
+        <div class="product-card reveal">
+          <div class="product-img-wrap">
+            <img src="../img/prod1.webp" alt="Cloro" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Desinfecção</span>
+            <h3>Cloro Granulado</h3>
+            <p>Produto essencial para a desinfecção eficaz da piscina, eliminando bactérias e mantendo a água limpa.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/choque.webp" alt="Algicida">
-          <h3>Algicida</h3>
-          <p>Previne e combate o surgimento de algas, garantindo água cristalina e saudável.</p>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-img-wrap">
+            <img src="../img/choque.webp" alt="Algicida" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Algas</span>
+            <h3>Algicida de Choque</h3>
+            <p>Previne e combate o surgimento de algas, garantindo água cristalina e saudável.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/clarificante.jfif" alt="Clarificante">
-          <h3>Clarificante</h3>
-          <p>Auxilia na rápida clarificação da água, eliminando partículas em suspensão.</p>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-img-wrap">
+            <img src="../img/clarificante.jfif" alt="Clarificante" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Clareza</span>
+            <h3>Clarificante</h3>
+            <p>Auxilia na rápida clarificação da água, eliminando partículas em suspensão visíveis.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/testepis.jpg" alt="Kit Teste pH & Cloro">
-          <h3>Kit Teste pH & Cloro</h3>
-          <p>Permite monitorar facilmente os níveis de pH e cloro, ajudando a manter a qualidade ideal da água.</p>
+        <div class="product-card reveal reveal-delay-3">
+          <div class="product-img-wrap">
+            <img src="../img/testepis.jpg" alt="Kit Teste" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Análise</span>
+            <h3>Kit Teste pH &amp; Cloro</h3>
+            <p>Monitore facilmente os níveis de pH e cloro para manter a qualidade ideal da água.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/alcalinidade.webp" alt="Estabilizadores">
-          <h3>Estabilizadores</h3>
-          <p>Controla a alcalinidade e o pH para manter o cloro ativo por mais tempo, garantindo economia e eficiência.</p>
+        <div class="product-card reveal">
+          <div class="product-img-wrap">
+            <img src="../img/alcalinidade.webp" alt="Estabilizador" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">pH &amp; Alcalinidade</span>
+            <h3>Estabilizadores</h3>
+            <p>Controla a alcalinidade e o pH para manter o cloro ativo por mais tempo com economia.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/pastilhamo.jpg" alt="Pastilhas">
-          <h3>Pastilhas</h3>
-          <p>Fornece uma liberação uniforme e prolongada de cloro para proteção constante da água.</p>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-img-wrap">
+            <img src="../img/pastilhamo.jpg" alt="Pastilhas" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Longa Duração</span>
+            <h3>Pastilhas de Cloro</h3>
+            <p>Liberação uniforme e prolongada de cloro para proteção contínua da água.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/peroxy.webp" alt="Oxidantes">
-          <h3>Oxidantes</h3>
-          <p>Produto multifuncional que limpa, clarifica e combate algas simultaneamente.</p>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-img-wrap">
+            <img src="../img/peroxy.webp" alt="Oxidante" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Multifuncional</span>
+            <h3>Oxidantes</h3>
+            <p>Produto que limpa, clarifica e combate algas simultaneamente com alta eficiência.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/bordas.jpg" alt="Limpa Bordas">
-          <h3>Limpa Bordas</h3>
-          <p>Remove gordura, sujeira e resíduos acumulados nas bordas da piscina, mantendo a estética e higiene.</p>
+        <div class="product-card reveal reveal-delay-3">
+          <div class="product-img-wrap">
+            <img src="../img/bordas.jpg" alt="Limpa Bordas" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Limpeza</span>
+            <h3>Limpa Bordas</h3>
+            <p>Remove gordura, sujeira e resíduos acumulados nas bordas, mantendo estética e higiene.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/redutor.webp" alt="Redutor de pH">
-          <h3>Redutor de pH</h3>
-          <p>Corrige a acidez da água, ajustando o pH para níveis ideais e protegendo equipamentos e usuários.</p>
+        <div class="product-card reveal">
+          <div class="product-img-wrap">
+            <img src="../img/redutor.webp" alt="Redutor pH" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">pH</span>
+            <h3>Redutor de pH</h3>
+            <p>Corrige a acidez da água, ajustando o pH para níveis ideais e protegendo equipamentos.</p>
+          </div>
         </div>
 
-                <div class="card">
-          <img src="../img/crisagua.jpg" alt="Decantador">
-          <h3>Decantador</h3>
-          <p>Produtos para realizar a decantação correta para sua piscina </p>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-img-wrap">
+            <img src="../img/crisagua.jpg" alt="Decantador" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Clareza</span>
+            <h3>Decantador</h3>
+            <p>Realiza a decantação correta para sua piscina, deixando a água limpa e transparente.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/neoclor1kg.jpg" alt="Cloros">
-          <h3>Cloros</h3>
-          <p>Produto essencial para a desinfecção eficaz da piscina, eliminando bactérias e mantendo a água limpa.</p>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-img-wrap">
+            <img src="../img/neoclor1kg.jpg" alt="Cloro Granulado" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Desinfecção</span>
+            <h3>Cloro Pó 1kg</h3>
+            <p>Cloro granulado de alta concentração para tratamento de choque e manutenção.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="../img/limpeza.jpg" alt="Kit Limpeza">
-          <h3>Kit Limpeza</h3>
-          <p>Temos todos os acessórios essenciais para executar a limpeza da sua piscina de forma eficaz</p>
+        <div class="product-card reveal reveal-delay-3">
+          <div class="product-img-wrap">
+            <img src="../img/limpeza.jpg" alt="Kit Limpeza" />
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Acessórios</span>
+            <h3>Kit Limpeza</h3>
+            <p>Todos os acessórios essenciais para executar a limpeza da piscina de forma eficaz.</p>
+          </div>
         </div>
       </div>
-      
     </section>
 
-    <section class="calculadora" id="calculadora">
-      <h2>Calcule a Litragem da sua Piscina</h2>
+    <!-- CALCULADORA -->
+    <section id="calculadora">
+      <div class="calc-inner">
+        <div class="section-header reveal" style="margin-bottom:2.5rem">
+          <div class="section-tag">Ferramenta gratuita</div>
+          <h2 class="section-title">Calcule a <span>Litragem</span></h2>
+          <p class="section-subtitle">Informe as dimensões da sua piscina e descubra o volume exato de água</p>
+        </div>
 
-      <div class="formulario">
-        <label>Largura (m): <input type="number" id="largura" /></label>
-        <label>Comprimento (m): <input type="number" id="comprimento" /></label>
-        <label>Profundidade (m): <input type="number" id="profundidade" /></label>
-        <button onclick="calcularLitros()">Calcular</button>
-        <p id="resultado"></p>
+        <div class="calc-box reveal">
+          <div class="calc-grid">
+            <div class="calc-field">
+              <label for="largura">Largura (m)</label>
+              <input type="number" id="largura" placeholder="Ex: 5" min="0" step="0.1" />
+            </div>
+            <div class="calc-field">
+              <label for="comprimento">Comprimento (m)</label>
+              <input type="number" id="comprimento" placeholder="Ex: 8" min="0" step="0.1" />
+            </div>
+            <div class="calc-field">
+              <label for="profundidade">Profundidade (m)</label>
+              <input type="number" id="profundidade" placeholder="Ex: 1.5" min="0" step="0.1" />
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-primary" onclick="calcularLitragem()">
+              📐 Calcular Litragem
+            </button>
+            <button class="btn-secondary" onclick="limparCalculo()">
+              Limpar
+            </button>
+          </div>
+
+          <div class="calc-result" id="calc-result">
+            <div class="calc-result-value" id="result-value">—</div>
+            <div class="calc-result-label">litros de água na sua piscina</div>
+            <div class="calc-result-tip">
+              💡 Com esse volume, nosso assistente pode calcular as dosagens exatas de produtos químicos.
+              <br/><a href="tratar.html" id="treat-link">Tratar minha piscina agora →</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-  </main>
-
-<footer>
-  <div class="footer-container">
-
-    <div class="footer-left">
-      <p>© 2026 Hydra Piscinas • Todos os direitos reservados</p>
-      <p class="author">Desenvolvido por Paulo Rogério Vigário</p>
-    </div>
-
-    <div class="footer-center">
-      <p>Associados da ANNAP</p>
-      <img src="../img/anapp.webp" alt="ANNAP">
-    </div>
-
   </div>
-</footer>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>© 2026 Hydra Piscinas • Todos os direitos reservados</p>
+        <p class="author">Desenvolvido por Paulo Rogério Vigário</p>
+      </div>
+      <div class="footer-center">
+        <p>Associados da ANNAP</p>
+        <img src="../img/anapp.webp" alt="ANNAP" />
+      </div>
+    </div>
+  </footer>
 
   <script src="../js/global.js"></script>
-
-
+  <script src="../js/produtos.js"></script>
 </body>
 </html>

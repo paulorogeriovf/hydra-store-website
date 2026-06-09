@@ -3,127 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hydra Piscinas - Serviços</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/servicos.css">
-
-  <!-- Favicon -->
-  <link rel="icon" href="../img/logofundobranco.jpg" type="image/png">
+  <title>Serviços — Hydra Piscinas</title>
+  <meta name="description" content="Serviços de manutenção, instalação e tratamento de piscinas pela Hydra Piscinas em Arthur Nogueira." />
+  <link rel="icon" href="../img/logofundobranco.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/servicos.css" />
 </head>
-
 <body>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="../img/logo2025.png" alt="Logo Hydra Piscinas">
-    </div>
+  <canvas id="water-particles"></canvas>
 
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="logo">
+      <img src="../img/logo2025.png" alt="Hydra Piscinas" />
+    </a>
     <ul class="nav-links" id="nav-links">
       <li><a href="../index.html">Início</a></li>
-      <li><a href="../pages/servicos.html" class="active">Serviços</a></li>
-      <li><a href="../pages/produtos.html">Produtos</a></li>
-      <li>
-        <a href="https://wa.me/5519999040358?text=Olá,+quero+mais+informações." target="_blank">
-          Contato
-        </a>
-      </li>
+      <li><a href="servicos.html" class="active">Serviços</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+      <li><a href="tratar.html" class="nav-cta">💧 Tratar Minha Piscina</a></li>
     </ul>
-
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
   </nav>
 
-  <div class="wave-container">
-    <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path fill="#0a70ac" d="M0,0 C360,150 1080,0 1440,150 L1440,0 L0,0 Z"></path>
-    </svg>
+  <!-- PAGE HERO -->
+  <div class="page-wrapper">
+    <div class="page-hero">
+      <div class="page-hero-tag">O que fazemos</div>
+      <h1>Serviços em <span>Geral</span></h1>
+      <p>Manutenção, instalação e cuidados completos para manter sua piscina sempre em perfeito estado.</p>
+    </div>
+
+    <div class="page-wave">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path fill="#051828" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"/>
+      </svg>
+    </div>
+
+    <!-- SERVIÇOS GRID -->
+    <section class="services-section">
+      <div class="services-full-grid">
+
+        <div class="service-full-card reveal">
+          <img src="../img/areia.png" alt="Troca de Areia" class="service-full-img" />
+          <div class="service-full-body">
+            <span class="service-full-icon">🔄</span>
+            <h3>Troca de Areia</h3>
+            <p>A areia do filtro é essencial para a limpeza eficiente da água. A troca garante melhor filtração, mantendo a piscina sempre limpa e cristalina.</p>
+            <a href="https://wa.me/5519999040358?text=Olá, gostaria de um orçamento para troca de areia." target="_blank" class="service-full-cta">Solicitar orçamento →</a>
+          </div>
+        </div>
+
+        <div class="service-full-card reveal reveal-delay-2">
+          <img src="../img/trocador calor.jpg" alt="Aquecimento" class="service-full-img" />
+          <div class="service-full-body">
+            <span class="service-full-icon">🌡️</span>
+            <h3>Aquecimento</h3>
+            <p>Permite manter a piscina em temperatura agradável, prolongando o uso mesmo em dias frios e aumentando o conforto da família.</p>
+            <a href="https://wa.me/5519999040358?text=Olá, gostaria de informações sobre aquecimento de piscina." target="_blank" class="service-full-cta">Solicitar orçamento →</a>
+          </div>
+        </div>
+
+        <div class="service-full-card reveal reveal-delay-1">
+          <img src="../img/geradorcloro.webp" alt="Gerador de Cloro" class="service-full-img" />
+          <div class="service-full-body">
+            <span class="service-full-icon">⚗️</span>
+            <h3>Gerador de Cloro</h3>
+            <p>Produz cloro automaticamente, mantendo a água sempre desinfetada, evitando bactérias e facilitando a manutenção com menos esforço.</p>
+            <a href="https://wa.me/5519999040358?text=Olá, gostaria de informações sobre gerador de cloro." target="_blank" class="service-full-cta">Saiba mais →</a>
+          </div>
+        </div>
+
+
+        <div class="service-full-card reveal reveal-delay-1">
+          <img src="../img/Kit 2 Leds Hydra.png" alt="Troca de LEDs" class="service-full-img" />
+          <div class="service-full-body">
+            <span class="service-full-icon">💡</span>
+            <h3>Troca de LEDs</h3>
+            <p>Valoriza o visual da piscina, melhora a iluminação noturna e contribui para o controle visual da qualidade da água.</p>
+            <a href="https://wa.me/5519999040358?text=Olá, gostaria de informações sobre troca de LEDs." target="_blank" class="service-full-cta">Ver modelos →</a>
+          </div>
+        </div>
+
+        <div class="service-full-card reveal reveal-delay-2">
+          <img src="../img/limpa.jfif" alt="Limpeza Mensal" class="service-full-img" />
+          <div class="service-full-body">
+            <span class="service-full-icon">✨</span>
+            <h3>Limpeza Mensal</h3>
+            <p>Limpeza periódica completa, ajuste de pH e alcalinidade, mantendo a piscina saudável, limpa e segura para toda a família.</p>
+            <a href="https://wa.me/5519999040358?text=Olá, gostaria de contratar limpeza mensal de piscina." target="_blank" class="service-full-cta">Contratar →</a>
+          </div>
+        </div>
+
+        <div class="service-full-card reveal reveal-delay-3">
+          <img src="../img/manut_Bombas.jpg" alt="Manutenção de Bombas" class="service-full-img" />
+          <div class="service-full-body">
+            <span class="service-full-icon">⚙️</span>
+            <h3>Manutenção de Bombas</h3>
+            <p>Realizamos a manutenção da motobomba e filtro para reduzir custos, evitar falhas e preservar a estrutura da piscina.</p>
+            <a href="https://wa.me/5519999040358?text=Olá, gostaria de manutenção da bomba da minha piscina." target="_blank" class="service-full-cta">Agendar visita →</a>
+          </div>
+        </div>
+
+        <div class="service-full-card reveal">
+          <img src="../img/vazamento.webp" alt="Assistências em Geral" class="service-full-img" />
+          <div class="service-full-body">
+            <span class="service-full-icon">🔨</span>
+            <h3>Assistências em Geral</h3>
+            <p>Realizamos assistência técnica completa em equipamentos e acessórios de piscinas. Diagnóstico preciso e solução rápida para qualquer problema.</p>
+            <a href="https://wa.me/5519999040358?text=Olá, gostaria de solicitar assistência técnica." target="_blank" class="service-full-cta">Solicitar assistência →</a>
+          </div>
+        </div>
+
+        <div class="service-full-card reveal reveal-delay-1">
+          <img src="../img/capa.webp" alt="Capas" class="service-full-img" />
+          <div class="service-full-body">
+            <span class="service-full-icon">🛡️</span>
+            <h3>Capas para Piscinas</h3>
+            <p>Oferecemos capas térmicas e protetoras para piscinas, proporcionando maior segurança, conservação da temperatura da água e redução da evaporação. Além disso, ajudam a manter a piscina limpa por mais tempo, reduzindo custos com manutenção e produtos químicos.</p>
+            <a href="https://wa.me/5519999040358?text=Olá, gostaria de informações sobre capas para piscinas." target="_blank" class="service-full-cta">Saiba mais →</a>
+          </div>
+        </div>
+
+        <div class="service-full-card reveal reveal-delay-2">
+          <img src="../img/caca-vazamento-piscina.webp" alt="Caça Vazamentos" class="service-full-img" />
+          <div class="service-full-body">
+            <span class="service-full-icon">🔍</span>
+            <h3>Caça Vazamentos</h3>
+            <p>Identificamos e corrigimos vazamentos em piscinas com tecnologia especializada, evitando desperdício de água e danos estruturais à construção.</p>
+            <a href="https://wa.me/5519999040358?text=Olá, acredito que minha piscina tem vazamento, podem me ajudar?" target="_blank" class="service-full-cta">Solicitar vistoria →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA CONTATO -->
+    <div class="contact-cta-band reveal">
+      <h2>Precisa de um <span>orçamento</span>?</h2>
+      <p>Entre em contato com a gente pelo WhatsApp e receba um atendimento rápido e personalizado.</p>
+      <div class="contact-cta-buttons">
+        <a href="https://wa.me/5519999040358?text=Olá, gostaria de um orçamento." target="_blank" class="btn-primary">
+          📱 WhatsApp
+        </a>
+        <a href="../index.html#contato" class="btn-secondary">
+          📍 Ver localização
+        </a>
+      </div>
+    </div>
   </div>
-</header>
 
-<main>
-  <section class="section-produtos">
-    <h2>Serviços em Geral</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <img src="../img/areia.png" alt="Troca de Areia">
-        <h3>Troca de Areia</h3>
-        <p>
-          A areia do filtro é essencial para a limpeza eficiente da água.
-          A troca garante melhor filtração, mantendo a piscina sempre limpa e cristalina.
-        </p>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>© 2026 Hydra Piscinas • Todos os direitos reservados</p>
+        <p class="author">Desenvolvido por Paulo Rogério Vigário</p>
       </div>
-
-      <div class="card">
-        <img src="../img/geradorcloro.webp" alt="Gerador de Cloro">
-        <h3>Gerador de Cloro</h3>
-        <p>
-          Produz cloro automaticamente, mantendo a água sempre desinfetada,
-          evitando bactérias e facilitando a manutenção.
-        </p>
+      <div class="footer-center">
+        <p>Associados da ANNAP</p>
+        <img src="../img/anapp.webp" alt="ANNAP" />
       </div>
-
-      <div class="card">
-        <img src="../img/calor.jfif" alt="Aquecimento">
-        <h3>Aquecimento</h3>
-        <p>
-          Permite manter a piscina em temperatura agradável,
-          prolongando o uso mesmo em dias frios.
-        </p>
-      </div>
-
-      <div class="card">
-        <img src="../img/ledhydra.png" alt="Troca de LEDs">
-        <h3>Troca de LEDs</h3>
-        <p>
-          Valoriza o visual da piscina, melhora a iluminação noturna
-          e contribui para o controle visual da água.
-        </p>
-      </div>
-
-      <div class="card">
-        <img src="../img/limpa.jfif" alt="Limpeza Mensal">
-        <h3>Limpeza Mensal</h3>
-        <p>
-          Limpeza periódica, ajuste de pH e alcalinidade,
-          mantendo a piscina saudável, limpa e segura.
-        </p>
-      </div>
-
-      <div class="card">
-        <img src="../img/vazamento.webp" alt="Análise de Vazamentos">
-        <h3>Manutenção de Bombas</h3>
-        <p>
-          Realizamos a manutenção da sua motobomba e filtro,
-          reduzir custos e preservar a estrutura da piscina.
-        </p>
-      </div>
-
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="footer-container">
-
-    <div class="footer-left">
-      <p>© 2026 Hydra Piscinas • Todos os direitos reservados</p>
-      <p class="author">Desenvolvido por Paulo Rogério Vigário</p>
-    </div>
-
-    <div class="footer-center">
-      <p>Associados da ANNAP</p>
-      <img src="../img/anapp.webp" alt="ANNAP">
-    </div>
-
-  </div>
-</footer>
-
-<!-- JS GLOBAL -->
-<script src="../js/global.js"></script>
-
+  <script src="../js/global.js"></script>
 </body>
 </html>
