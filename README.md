@@ -1,73 +1,143 @@
-# 🌊 Hydra Piscinas – Site Institucional
+# 🌊 Hydra Piscinas – Plataforma Web Institucional e Assistente de Tratamento
 
-Este projeto consiste no desenvolvimento de um **site institucional responsivo** para uma loja física de piscinas e acessórios, criado com o objetivo de **praticar, treinar e evoluir minhas habilidades em Front-end**.
+Projeto desenvolvido para a Hydra Piscinas com foco em apresentar a empresa, seus produtos, serviços e oferecer ferramentas úteis para clientes através de uma experiência moderna, responsiva e intuitiva.
 
-O site foi desenvolvido seguindo a necessidade do cliente: **apenas um site informativo**, sem sistema de orçamento ou vendas online, focado em apresentar a loja, seus produtos, localização e meios de contato.
+🔗 Site em produção: https://hydrapiscinas.netlify.app/
 
 ---
 
 ## 🎯 Objetivo do Projeto
 
-- Treinar e consolidar conhecimentos em **HTML, CSS e JavaScript**
-- Desenvolver um site **responsivo**
-- Criar uma interface **simples, moderna e intuitiva**
-- Seguir um **layout limpo e organizado**, facilitando manutenção futura
-- Aplicar boas práticas de **organização de código e estrutura de pastas**
+Este projeto começou como um site institucional para prática de desenvolvimento Front-end e evoluiu para uma plataforma completa com ferramentas interativas voltadas ao segmento de piscinas.
+
+Os principais objetivos foram:
+
+* Criar uma presença digital moderna para a empresa
+* Melhorar a experiência do cliente
+* Automatizar processos de orientação básica sobre tratamento de piscinas
+* Desenvolver um projeto real para aprimoramento técnico em Front-end
+* Aplicar boas práticas de organização, manutenção e escalabilidade
+
+---
+
+## 🚀 Principais Funcionalidades
+
+### 🏪 Site Institucional
+
+* Apresentação da empresa
+* Catálogo de produtos
+* Sessão de serviços
+* Informações de contato
+* Integração com WhatsApp
+* Integração com Instagram
+* Localização da loja
+
+### 💧 Assistente Inteligente de Tratamento
+
+Sistema desenvolvido para auxiliar clientes na identificação e tratamento de problemas comuns em piscinas.
+
+Funcionalidades:
+
+* Cálculo automático de litragem
+* Diagnóstico baseado no problema informado
+* Análise opcional de:
+
+  * pH
+  * Cloro
+  * Alcalinidade
+* Geração automática de protocolos de tratamento
+* Cálculo de dosagens conforme volume da piscina
+* Recomendações de manutenção preventiva
+* Regras de segurança para aplicação de produtos
+* Encaminhamento direto para atendimento via WhatsApp
+
+### 🧮 Calculadoras
+
+Ferramentas auxiliares para facilitar o dia a dia dos clientes e da loja.
+
+### 📱 Responsividade Completa
+
+O site foi desenvolvido com abordagem Mobile First e funciona em:
+
+* Smartphones
+* Tablets
+* Notebooks
+* Monitores Desktop
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML5** – Estrutura do site  
-- **CSS3** – Estilização, responsividade e layout  
-- **JavaScript** – Interações, menu mobile, pop-ups e funcionalidades extras  
+### Front-end
+
+* HTML5
+* CSS3
+* JavaScript (Vanilla JS)
+
+### Hospedagem e Deploy
+
+* Git
+* GitHub
+* Netlify
 
 ---
 
-## 📱 Funcionalidades
+## ⚡ Deploy Automatizado
 
-- Layout **totalmente responsivo**
-- Menu mobile funcional
-- Sessão de produtos informativa
-- Sessão de contato com:
-  - Botão direto para WhatsApp
-  - Link para e-mail
-  - Link para Instagram
-- Integração com **Google Maps**
-- **Pop-ups informativos**
-- Calculadora auxiliar
-- Estrutura organizada visando **fácil manutenção e correção de bugs**
-- Código comentado para **melhor aprendizado e didática**
+O projeto está integrado ao GitHub através do Netlify.
 
----
+Fluxo de publicação:
 
-## 📌 Sobre o Desenvolvimento
+1. Alteração realizada localmente
+2. Commit e push para o GitHub
+3. Netlify detecta automaticamente a atualização
+4. Novo deploy é executado
+5. Site atualizado em produção
 
-Este projeto foi desenvolvido por mim com o foco em **aprendizado prático**, buscando aplicar conceitos reais de desenvolvimento web utilizados no mercado.
-
-Todo o código foi escrito pensando em:
-- Organização
-- Clareza
-- Legibilidade
-- Facilidade de manutenção
-- Evolução constante como desenvolvedor
+Isso elimina a necessidade de publicação manual a cada alteração.
 
 ---
 
-## 🚀 Próximos Passos
+## 🎨 Melhorias Implementadas na Versão Atual
 
-- Otimização de performance
-- Melhorias visuais
-- Pequenas animações
-- SEO básico
-- Possível integração com backend futuramente
-
----
-
-## 👨‍💻 Desenvolvido por
-
-**Paulo Rogério Vigário**  
-Estudante de Ciência da Computação | Front-end em desenvolvimento  
+* Redesign completo da interface
+* Melhor organização visual
+* Melhor experiência mobile
+* Novas animações e transições
+* Assistente inteligente de tratamento reformulado
+* Correções de responsividade
+* Estrutura de código reorganizada
+* Melhor navegabilidade
+* Melhor integração entre páginas
+* Otimizações de manutenção futura
 
 ---
 
+## 📚 Aprendizados Aplicados
+
+Durante o desenvolvimento foram trabalhados conceitos como:
+
+* Estruturação de projetos Front-end
+* Manipulação do DOM
+* Responsividade
+* Organização de código
+* UX/UI
+* Deploy contínuo
+* Integração Git + GitHub + Netlify
+* Lógica de negócio aplicada a um problema real
+
+---
+
+## 👨‍💻 Desenvolvedor
+
+Paulo Rogério Vigário
+
+Estudante de Ciência da Computação
+
+Projeto desenvolvido como experiência prática de desenvolvimento web, aplicando conceitos reais utilizados no mercado e solucionando necessidades de um cliente real.
+
+---
+
+## 📄 Licença
+
+Projeto desenvolvido para fins comerciais da Hydra Piscinas e para fins de aprendizado e evolução profissional do desenvolvedor.
