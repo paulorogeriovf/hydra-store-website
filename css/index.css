@@ -38,7 +38,7 @@
 
 @media (max-width: 600px) {
   .hero-bg-img {
-    background-image: url('../img/pool2.jpg');
+    background-image: url('../img/mobiledef.png');
     background-position: center center;
   }
 }
