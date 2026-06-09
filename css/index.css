@@ -39,7 +39,7 @@
 @media (max-width: 600px) {
   .hero-bg-img {
     background-image: url('../img/mobiledef.png');
-    background-position: center center;
+    background-position: center 72px;
   }
 }
 
