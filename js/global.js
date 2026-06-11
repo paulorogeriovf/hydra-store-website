@@ -41,49 +41,86 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ============================================================
   // STATUS ABERTO / FECHADO
-  // Horário: Seg–Sex 08h–18h | Sáb 08h–12h30 | Dom/Feriado: fechado
+  // Horário: Seg–Sex 08h–18h | Sáb 08h–12h30 | Dom: fechado
   // ============================================================
   function updateStatus() {
-    const badges = document.querySelectorAll('.status-badge');
-    if (!badges.length) return;
+  const badges = document.querySelectorAll('.status-badge');
+  if (!badges.length) return;
 
-    const now = new Date();
-    const day  = now.getDay();  // 0=Dom, 1=Seg... 6=Sáb
-    const hour = now.getHours();
-    const min  = now.getMinutes();
-    const totalMin = hour * 60 + min;
+  const now = new Date();
 
-    let isOpen = false;
-    let nextOpen = '';
+  const day = now.getDay(); // 0=Dom,1=Seg
+  const minutes = now.getHours() * 60 + now.getMinutes();
 
-    if (day >= 1 && day <= 5) {
-      // Seg–Sex: 08:00–18:00
-      isOpen = totalMin >= 480 && totalMin < 1080;
-      if (!isOpen) {
-        nextOpen = totalMin < 480 ? '08h' : 'Segunda às 08h';
-      }
-    } else if (day === 6) {
-      // Sáb: 08:00–12:30
-      isOpen = totalMin >= 480 && totalMin < 750;
-      if (!isOpen) {
-        nextOpen = totalMin < 480 ? '08h' : 'Segunda às 08h';
-      }
+  const dias = [
+    'Domingo',
+    'Segunda',
+    'Terça',
+    'Quarta',
+    'Quinta',
+    'Sexta',
+    'Sábado'
+  ];
+
+  let isOpen = false;
+  let nextOpen = '';
+
+  // Segunda a Sexta
+  if (day >= 1 && day <= 5) {
+
+    if (minutes >= 480 && minutes < 1080) {
+      isOpen = true;
+    } else if (minutes < 480) {
+      nextOpen = 'hoje às 08h';
     } else {
-      // Dom: fechado
+
+      let nextDay = day + 1;
+
+if (nextDay === 6) {
+  nextOpen = 'Sábado às 08h';
+} else if (nextDay > 6) {
+  nextOpen = 'Segunda às 08h';
+} else {
+  nextOpen = `${dias[nextDay]} às 08h`;
+}
+    }
+
+  }
+
+  // Sábado
+  else if (day === 6) {
+
+    if (minutes >= 480 && minutes < 750) {
+      isOpen = true;
+    } else if (minutes < 480) {
+      nextOpen = 'Hoje às 08h';
+    } else {
       nextOpen = 'Segunda às 08h';
     }
 
-    badges.forEach(badge => {
-      badge.classList.remove('open', 'closed');
-      if (isOpen) {
-        badge.classList.add('open');
-        badge.innerHTML = '<span class="status-dot"></span>Abertos agora';
-      } else {
-        badge.classList.add('closed');
-        badge.innerHTML = `<span class="status-dot"></span>Fechado · Abre ${nextOpen}`;
-      }
-    });
   }
+
+  // Domingo
+  else {
+    nextOpen = 'Segunda às 08h';
+  }
+
+  badges.forEach(badge => {
+
+    badge.classList.remove('open', 'closed');
+
+    if (isOpen) {
+      badge.classList.add('open');
+      badge.innerHTML =
+        '<span class="status-dot"></span>Abertos agora';
+    } else {
+      badge.classList.add('closed');
+      badge.innerHTML =
+        `<span class="status-dot"></span>Fechado · Abre ${nextOpen}`;
+    }
+
+  });
+}
 
   updateStatus();
   setInterval(updateStatus, 30000); // Atualiza a cada 30s
