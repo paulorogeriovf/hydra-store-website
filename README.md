@@ -1,4 +1,4 @@
-# 🌊 Hydra Piscinas – Plataforma Web Institucional e Assistente de Tratamento
+# Hydra Piscinas – Plataforma Web Institucional e Assistente de Tratamento
 
 Projeto desenvolvido para a Hydra Piscinas com foco em apresentar a empresa, seus produtos, serviços e oferecer ferramentas úteis para clientes através de uma experiência moderna, responsiva e intuitiva.
 
@@ -6,7 +6,7 @@ Projeto desenvolvido para a Hydra Piscinas com foco em apresentar a empresa, seu
 
 ---
 
-## 🎯 Objetivo do Projeto
+## Objetivo do Projeto
 
 Este projeto começou como um site institucional para prática de desenvolvimento Front-end e evoluiu para uma plataforma completa com ferramentas interativas voltadas ao segmento de piscinas.
 
@@ -20,11 +20,11 @@ Os principais objetivos foram:
 
 ---
 
-## 🚀 Principais Funcionalidades
+## Principais Funcionalidades
 
-### 🏪 Site Institucional
+### Site Institucional
 
-* Apresentação da empresa
+* Apresentação da empresa real
 * Catálogo de produtos
 * Sessão de serviços
 * Informações de contato
@@ -32,7 +32,7 @@ Os principais objetivos foram:
 * Integração com Instagram
 * Localização da loja
 
-### 💧 Assistente Inteligente de Tratamento
+### Assistente Inteligente de Tratamento
 
 Sistema desenvolvido para auxiliar clientes na identificação e tratamento de problemas comuns em piscinas.
 
@@ -51,11 +51,11 @@ Funcionalidades:
 * Regras de segurança para aplicação de produtos
 * Encaminhamento direto para atendimento via WhatsApp
 
-### 🧮 Calculadoras
+### Calculadoras
 
 Ferramentas auxiliares para facilitar o dia a dia dos clientes e da loja.
 
-### 📱 Responsividade Completa
+### Responsividade Completa
 
 O site foi desenvolvido com abordagem Mobile First e funciona em:
 
@@ -66,7 +66,7 @@ O site foi desenvolvido com abordagem Mobile First e funciona em:
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Front-end
 
@@ -82,7 +82,7 @@ O site foi desenvolvido com abordagem Mobile First e funciona em:
 
 ---
 
-## ⚡ Deploy Automatizado
+## Deploy Automatizado
 
 O projeto está integrado ao GitHub através do Netlify.
 
@@ -98,7 +98,7 @@ Isso elimina a necessidade de publicação manual a cada alteração.
 
 ---
 
-## 🎨 Melhorias Implementadas na Versão Atual
+## Melhorias Implementadas na Versão Atual
 
 * Redesign completo da interface
 * Melhor organização visual
@@ -110,21 +110,6 @@ Isso elimina a necessidade de publicação manual a cada alteração.
 * Melhor navegabilidade
 * Melhor integração entre páginas
 * Otimizações de manutenção futura
-
----
-
-## 📚 Aprendizados Aplicados
-
-Durante o desenvolvimento foram trabalhados conceitos como:
-
-* Estruturação de projetos Front-end
-* Manipulação do DOM
-* Responsividade
-* Organização de código
-* UX/UI
-* Deploy contínuo
-* Integração Git + GitHub + Netlify
-* Lógica de negócio aplicada a um problema real
 
 ---
 
