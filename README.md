@@ -2,7 +2,9 @@
 
 Projeto desenvolvido para a Hydra Piscinas com foco em apresentar a empresa, seus produtos, serviços e oferecer ferramentas úteis para clientes através de uma experiência moderna, responsiva e intuitiva.
 
-🔗 Site em produção: https://hydrapiscinas.netlify.app/
+<p align="center">
+  <img src="img/tela_inicial.png"">
+</p>
 
 ---
 
@@ -26,11 +28,20 @@ Os principais objetivos foram:
 
 * Apresentação da empresa real
 * Catálogo de produtos
+
+ <p align="center">
+  <img src="img/print_produtos.png"">
+</p>
+
 * Sessão de serviços
 * Informações de contato
 * Integração com WhatsApp
 * Integração com Instagram
 * Localização da loja
+
+ <p align="center">
+  <img src="img/loc.png"">
+</p>
 
 ### Assistente Inteligente de Tratamento
 
@@ -39,13 +50,28 @@ Sistema desenvolvido para auxiliar clientes na identificação e tratamento de p
 Funcionalidades:
 
 * Cálculo automático de litragem
+
+ <p align="center">
+  <img src="img/print1tratar.png"">
+</p>
+
 * Diagnóstico baseado no problema informado
+
+ <p align="center">
+  <img src="img/print2tratar.png"">
+</p>
+
 * Análise opcional de:
 
   * pH
   * Cloro
   * Alcalinidade
 * Geração automática de protocolos de tratamento
+
+ <p align="center">
+  <img src="img/print4tratar.png"">
+</p>
+
 * Cálculo de dosagens conforme volume da piscina
 * Recomendações de manutenção preventiva
 * Regras de segurança para aplicação de produtos
